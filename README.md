@@ -22,3 +22,50 @@ Install the dependencies using the following command:
 
 ```bash
 pip install -r requirements.txt
+
+## Run Flask App
+
+To run the Flask app, execute the following command:
+
+```bash
+python main.py
+
+## cURL
+
+- First cURL
+
+curl --location 'http://127.0.0.1:5000/predict' \
+--header 'Content-Type: application/json' \
+--data '{
+  "Lot Area": 12000,
+  "Overall Qual": 8,
+  "Overall Cond": 5,
+  "Year Built": 2005,
+  "Gr Liv Area": 2500,
+  "Total Bsmt SF": 1000,
+  "Garage Area": 600,
+  "Full Bath": 2,
+  "Half Bath": 1,
+  "Bedroom AbvGr": 3,
+  "TotRms AbvGrd": 7
+}'
+
+- Second cURL
+
+curl --location 'http://127.0.0.1:5000/predict' \
+--header 'Content-Type: application/json' \
+--data '{
+  "Lot Area": 6000,
+  "Overall Qual": 5,
+  "Overall Cond": 6,
+  "Year Built": 1975,
+  "Gr Liv Area": 1200,
+  "Total Bsmt SF": 500,
+  "Garage Area": 300,
+  "Full Bath": 1,
+  "Half Bath": 0,
+  "Bedroom AbvGr": 2,
+  "TotRms AbvGrd": 5
+}'
+
+
